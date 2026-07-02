@@ -6,13 +6,7 @@ export const Logo: React.FC<{ size?: 'sm' | 'md' | 'lg'; withText?: boolean }> =
   return (
     <Link to="/" className="flex items-center gap-3 group">
       <div className={`${s} relative rounded-xl bg-gradient-to-br from-blue-700 to-orange-500 flex items-center justify-center shadow-lg shadow-blue-900/40 group-hover:shadow-orange-500/40 transition-shadow`}>
-        <img
-          src="https://d64gsuwffb70l.cloudfront.net/6a01d99b871ec2be0303a5e7_1778506402792_6b42971f.jfif"
-          alt="TutorConnect"
-          className="h-full w-full rounded-xl object-cover"
-          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-        />
-        <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg pointer-events-none">TC</span>
+        <span className="text-white font-bold text-lg">TC</span>
       </div>
       {withText && (
         <div className="leading-tight">
