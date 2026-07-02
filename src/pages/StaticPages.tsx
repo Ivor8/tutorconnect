@@ -8,16 +8,16 @@ export const About: React.FC = () => (
   <div className="min-h-screen bg-slate-950 text-white">
     <PublicNav />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-      <h1 className="text-4xl sm:text-5xl font-bold mb-4">About TutorConnect UBa</h1>
+      <h1 className="text-4xl sm:text-5xl font-bold mb-4">About TutorConnect</h1>
       <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
-        TutorConnect UBa is the official tutoring marketplace built exclusively for students at the University of Bamenda. We connect students with qualified tutors from across the university, enabling seamless real-time communication, scheduling, and online learning.
+        TutorConnect is a tutoring marketplace for learners everywhere. We connect students with qualified tutors across subjects, enabling seamless communication, scheduling, and online learning.
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 my-12">
         {[
-          { i: BookOpen, t: 'Quality Education', d: 'Verified tutors from UBa across all disciplines.' },
-          { i: Users, t: 'Real Community', d: 'Connect with real UBa students and tutors.' },
+          { i: BookOpen, t: 'Quality Education', d: 'Verified tutors across all disciplines.' },
+          { i: Users, t: 'Real Community', d: 'Connect with real learners and tutors.' },
           { i: Target, t: 'Goal Focused', d: 'Achieve academic excellence with tailored sessions.' },
-          { i: Award, t: 'Trusted Platform', d: 'Built for and by the University of Bamenda.' },
+          { i: Award, t: 'Trusted Platform', d: 'Built for everyone seeking better learning outcomes.' },
         ].map((v, i) => (
           <div key={i} className="p-5 rounded-2xl bg-white/[0.04] border border-white/10">
             <v.i size={24} className="text-orange-400 mb-3" />
@@ -27,12 +27,12 @@ export const About: React.FC = () => (
         ))}
       </div>
       <div className="rounded-2xl overflow-hidden border border-white/10">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1400&q=80" alt="UBa students" className="w-full h-72 object-cover" />
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1400&q=80" alt="students learning" className="w-full h-72 object-cover" />
       </div>
       <div className="prose prose-invert max-w-none mt-10">
         <h2 className="text-2xl font-bold mb-3">Our Mission</h2>
         <p className="text-slate-300 leading-relaxed">
-          To empower every student at the University of Bamenda with access to high-quality, affordable, and flexible tutoring — bridging the gap between knowledge and academic success through technology.
+          To empower every learner with access to high-quality, affordable, and flexible tutoring — bridging the gap between knowledge and academic success through technology.
         </p>
       </div>
     </div>
@@ -67,9 +67,9 @@ export const Contact: React.FC = () => {
         <p className="text-slate-400 mb-10">Questions, feedback, or partnership ideas? Reach out.</p>
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-5">
-            <Contact_Item icon={<Mail />} label="Email" value="hello@tutorconnect-uba.cm" />
+            <Contact_Item icon={<Mail />} label="Email" value="hello@tutorconnect.com" />
             <Contact_Item icon={<Phone />} label="Phone" value="+237 6XX XXX XXX" />
-            <Contact_Item icon={<MapPin />} label="Address" value="University of Bamenda, North West Region, Cameroon" />
+            <Contact_Item icon={<MapPin />} label="Address" value="Online tutoring" />
           </div>
           <form onSubmit={submit} className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 space-y-4">
             <input required placeholder="Your name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm focus:outline-none focus:border-orange-500" />
@@ -110,7 +110,7 @@ export const FAQ: React.FC = () => {
       <PublicNav />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
-        <p className="text-slate-400 mb-10">Everything you need to know about TutorConnect UBa.</p>
+        <p className="text-slate-400 mb-10">Everything you need to know about TutorConnect.</p>
         <div className="space-y-3">
           {FAQS.map((f, i) => (
             <div key={i} className="bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden">

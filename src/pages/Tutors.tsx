@@ -46,7 +46,7 @@ const Tutors: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold mb-2">Find Your Tutor</h1>
-          <p className="text-slate-400">Browse verified tutors at the University of Bamenda</p>
+          <p className="text-slate-400">Browse verified tutors from across our platform</p>
         </div>
 
         <div className="grid lg:grid-cols-[260px_1fr] gap-6">
@@ -126,10 +126,10 @@ export const TutorCard: React.FC<{ t: any }> = ({ t }) => (
         <div className="flex-1 min-w-0">
           <div className="font-semibold group-hover:text-orange-400 transition-colors truncate">{t.full_name}</div>
           <div className="text-xs text-slate-400 truncate">@{t.username}</div>
-          <div className="flex items-center gap-1 text-xs text-slate-500 mt-0.5"><MapPin size={11} /> UBa</div>
+          <div className="flex items-center gap-1 text-xs text-slate-500 mt-0.5"><MapPin size={11} /> Online tutoring</div>
         </div>
       </div>
-      <p className="text-sm text-slate-400 line-clamp-2 mb-3 min-h-[40px]">{t.bio || 'Experienced tutor at UBa ready to help you excel.'}</p>
+      <p className="text-sm text-slate-400 line-clamp-2 mb-3 min-h-[40px]">{t.bio || 'Experienced tutor ready to help you excel.'}</p>
       <div className="flex flex-wrap gap-1 mb-4">
         {(t.subjects || []).slice(0, 3).map((s: string) => (
           <span key={s} className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/20">{s}</span>

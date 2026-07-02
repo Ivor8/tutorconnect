@@ -36,7 +36,7 @@ const Login: React.FC = () => {
         <div className="w-full max-w-md">
           <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-8 backdrop-blur-xl">
             <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
-            <p className="text-slate-400 text-sm mb-6">Sign in to continue learning at UBa</p>
+            <p className="text-slate-400 text-sm mb-6">Sign in to continue learning with TutorConnect</p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs uppercase tracking-wider text-slate-400 mb-1.5">Email</label>
@@ -48,7 +48,7 @@ const Login: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full pl-10 pr-3 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm focus:outline-none focus:border-orange-500"
-                    placeholder="you@uba.cm"
+                    placeholder="you@yourdomain.com"
                   />
                 </div>
               </div>

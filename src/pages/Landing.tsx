@@ -39,13 +39,13 @@ const Landing: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-300 text-xs font-medium mb-6">
               <Sparkles size={14} />
-              University of Bamenda · Official Tutoring Platform
+              TutorConnect · Tutoring platform for everyone
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Connect with <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-orange-400 bg-clip-text text-transparent">Expert Tutors</span> Instantly
             </h1>
             <p className="text-lg text-slate-300 mt-6 leading-relaxed max-w-xl">
-              TutorConnect UBa is the official tutoring marketplace for the University of Bamenda — discover qualified tutors, book real-time sessions, and learn through Google Meet.
+              TutorConnect is a tutoring marketplace for everyone — discover qualified tutors, book real-time sessions, and learn through online or in-person sessions.
             </p>
             <div className="flex flex-wrap gap-3 mt-8">
               <Link to="/tutors" className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold hover:shadow-lg hover:shadow-blue-600/40 transition-all inline-flex items-center gap-2">
@@ -140,10 +140,10 @@ const Landing: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Built for UBa Students, by UBa</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Built for learners, by learners</h2>
             <div className="space-y-5">
               {[
-                { icon: <Users size={20} />, t: 'Verified UBa Tutors', d: 'Every tutor is vetted and approved by our admin team.' },
+                { icon: <Users size={20} />, t: 'Verified Tutors', d: 'Every tutor is vetted and approved by our admin team.' },
                 { icon: <Clock size={20} />, t: 'Flexible Scheduling', d: 'Book sessions that fit your academic timetable.' },
                 { icon: <ShieldCheck size={20} />, t: 'Payment Protection', d: 'Your money is held until the class is unlocked.' },
                 { icon: <Star size={20} />, t: 'Transparent Reviews', d: 'Real student reviews help you pick the right tutor.' },
@@ -170,7 +170,7 @@ const Landing: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent)]" />
           <div className="relative">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to excel academically?</h2>
-            <p className="text-white/90 mb-8 max-w-xl mx-auto">Join the University of Bamenda's official tutoring community today.</p>
+            <p className="text-white/90 mb-8 max-w-xl mx-auto">Join TutorConnect's tutoring community today.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/register/student" className="px-6 py-3 rounded-xl bg-white text-blue-700 font-semibold hover:bg-slate-100">I'm a Student</Link>
               <Link to="/register/tutor" className="px-6 py-3 rounded-xl bg-slate-950 text-white font-semibold hover:bg-slate-900">I'm a Tutor</Link>
@@ -210,7 +210,7 @@ const TutorCardMini: React.FC<{ t: any }> = ({ t }) => (
           <div className="text-xs text-slate-400">@{t.username}</div>
         </div>
       </div>
-      <p className="text-sm text-slate-400 line-clamp-2 mb-4">{t.bio || 'Experienced tutor at UBa.'}</p>
+      <p className="text-sm text-slate-400 line-clamp-2 mb-4">{t.bio || 'Experienced tutor ready to help you excel.'}</p>
       <div className="flex flex-wrap gap-1 mb-4">
         {(t.subjects || []).slice(0, 3).map((s: string) => (
           <span key={s} className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/20">{s}</span>

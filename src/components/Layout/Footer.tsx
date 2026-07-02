@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
       await fetch('https://famous.ai/api/crm/6a01db58fbf8fa1e19eb449d/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'footer-signup', tags: ['newsletter', 'tutorconnect-uba'] }),
+        body: JSON.stringify({ email, source: 'footer-signup', tags: ['newsletter', 'tutorconnect'] }),
       });
       toast({ title: 'Subscribed!', description: 'You will hear from us soon.' });
       setEmail('');
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
         <div className="md:col-span-1">
           <Logo />
           <p className="text-sm text-slate-400 mt-4 leading-relaxed">
-            Connecting Students with Academic Excellence at the University of Bamenda.
+            Connecting learners with academic excellence.
           </p>
         </div>
         <div>
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="border-t border-white/5 py-6 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} TutorConnect UBa · University of Bamenda. All rights reserved.
+        © {new Date().getFullYear()} TutorConnect. All rights reserved.
       </div>
     </footer>
   );

@@ -47,7 +47,7 @@ const RegisterTutor: React.FC = () => {
               <Field label="Password" type="password" value={form.password} onChange={v => upd('password', v)} required />
               <Field label="Hourly Rate (XAF)" type="number" value={String(form.hourly_rate)} onChange={v => upd('hourly_rate', Number(v))} />
               <Field label="Years of Experience" type="number" value={String(form.experience_years)} onChange={v => upd('experience_years', Number(v))} />
-              <Field label="Qualifications" value={form.qualifications} onChange={v => upd('qualifications', v)} hint="e.g. BSc Mathematics, UBa" />
+              <Field label="Qualifications" value={form.qualifications} onChange={v => upd('qualifications', v)} hint="e.g. BSc Mathematics, B.Ed, M.Sc" />
             </div>
             <div>
               <label className="block text-xs uppercase tracking-wider text-slate-400 mb-1.5">Short Bio</label>

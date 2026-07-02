@@ -113,10 +113,10 @@ export const AdminReports: React.FC = () => (
 export const AdminSettings: React.FC = () => (
   <DashboardLayout title="Platform Settings">
     <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 max-w-2xl space-y-4">
-      <Setting label="Platform Name" value="TutorConnect UBa" />
+      <Setting label="Platform Name" value="TutorConnect" />
       <Setting label="Default Currency" value="XAF (Central African Franc)" />
       <Setting label="Payment Methods" value="MTN MoMo, Orange Money" />
-      <Setting label="University" value="University of Bamenda" />
+      <Setting label="Platform Scope" value="General public tutoring" />
     </div>
   </DashboardLayout>
 );

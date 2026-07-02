@@ -34,7 +34,7 @@ const AppLayout: React.FC = () => {
       await fetch('https://famous.ai/api/crm/6a01db58fbf8fa1e19eb449d/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'footer-signup', tags: ['newsletter', 'tutorconnect-uba'] }),
+        body: JSON.stringify({ email, source: 'footer-signup', tags: ['newsletter', 'tutorconnect'] }),
       });
       toast({ title: 'Subscribed!', description: 'You will hear from us soon.' });
       setEmail('');
@@ -48,10 +48,10 @@ const AppLayout: React.FC = () => {
       <header className="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-700 to-orange-500 flex items-center justify-center text-white font-bold shadow-lg">UBa</div>
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-700 to-orange-500 flex items-center justify-center text-white font-bold shadow-lg">TC</div>
             <div className="leading-tight">
-              <div className="font-bold bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">TutorConnect <span className="text-white">UBa</span></div>
-              <div className="text-[10px] text-slate-400 hidden sm:block">University of Bamenda</div>
+              <div className="font-bold bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">TutorConnect</div>
+              <div className="text-[10px] text-slate-400 hidden sm:block">Tutoring for everyone</div>
             </div>
           </Link>
           <nav className="hidden md:flex items-center gap-7">
@@ -77,13 +77,13 @@ const AppLayout: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-24 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-300 text-xs font-medium mb-6">
-              <Sparkles size={14} /> University of Bamenda · Official Tutoring Platform
+              <Sparkles size={14} /> TutorConnect · Tutoring platform for everyone
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Connect with <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-orange-400 bg-clip-text text-transparent">Expert Tutors</span> Instantly
             </h1>
             <p className="text-lg text-slate-300 mt-6 leading-relaxed max-w-xl">
-              The official tutoring marketplace for the University of Bamenda — discover qualified tutors, book real-time sessions, and learn through Google Meet.
+              A general tutoring marketplace — discover qualified tutors, book real-time sessions, and learn online or in person.
             </p>
             <div className="flex flex-wrap gap-3 mt-8">
               <Link to="/tutors" className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold inline-flex items-center gap-2"><Search size={18} /> Find a Tutor</Link>
@@ -162,7 +162,7 @@ const AppLayout: React.FC = () => {
                         <div className="text-xs text-slate-400">@{t.username}</div>
                       </div>
                     </div>
-                    <p className="text-sm text-slate-400 line-clamp-2 mb-4">{t.bio || 'Experienced tutor at UBa.'}</p>
+                    <p className="text-sm text-slate-400 line-clamp-2 mb-4">{t.bio || 'Experienced tutor ready to help you excel.'}</p>
                     <div className="flex items-center justify-between border-t border-white/5 pt-3">
                       <div className="flex items-center gap-1 text-sm"><Star size={14} className="fill-orange-400 text-orange-400" /><span>{Number(t.rating || 0).toFixed(1)}</span></div>
                       <div className="text-sm font-semibold text-orange-400">{t.hourly_rate || 0} XAF/hr</div>
@@ -178,10 +178,10 @@ const AppLayout: React.FC = () => {
       {/* Why us */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Built for UBa Students, by UBa</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Built for learners, by learners</h2>
           <div className="space-y-5">
             {[
-              { icon: <Users size={20} />, t: 'Verified UBa Tutors', d: 'Every tutor is vetted by our admin team.' },
+              { icon: <Users size={20} />, t: 'Verified Tutors', d: 'Every tutor is vetted by our admin team.' },
               { icon: <Clock size={20} />, t: 'Flexible Scheduling', d: 'Book sessions that fit your timetable.' },
               { icon: <ShieldCheck size={20} />, t: 'Payment Protection', d: 'Pay only after class is created for you.' },
               { icon: <Star size={20} />, t: 'Transparent Reviews', d: 'Real student reviews help you pick.' },
@@ -200,7 +200,7 @@ const AppLayout: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
         <div className="rounded-3xl p-10 sm:p-14 bg-gradient-to-r from-blue-700 via-blue-600 to-orange-500 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to excel academically?</h2>
-          <p className="text-white/90 mb-8">Join the University of Bamenda's official tutoring community today.</p>
+          <p className="text-white/90 mb-8">Join TutorConnect's tutoring community today.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/register/student" className="px-6 py-3 rounded-xl bg-white text-blue-700 font-semibold">I'm a Student</Link>
             <Link to="/register/tutor" className="px-6 py-3 rounded-xl bg-slate-950 text-white font-semibold">I'm a Tutor</Link>
@@ -213,10 +213,10 @@ const AppLayout: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-700 to-orange-500 flex items-center justify-center text-white font-bold">UBa</div>
-              <div className="font-bold bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">TutorConnect UBa</div>
+              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-700 to-orange-500 flex items-center justify-center text-white font-bold">TC</div>
+              <div className="font-bold bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">TutorConnect</div>
             </div>
-            <p className="text-sm text-slate-400">Connecting Students with Academic Excellence.</p>
+            <p className="text-sm text-slate-400">Connecting learners with academic excellence.</p>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">Platform</h4>
@@ -230,9 +230,9 @@ const AppLayout: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li className="inline-flex items-center gap-2"><Mail size={14} /> hello@tutorconnect-uba.cm</li>
+              <li className="inline-flex items-center gap-2"><Mail size={14} /> hello@tutorconnect.com</li>
               <li className="flex items-center gap-2"><Phone size={14} /> +237 6XX XXX XXX</li>
-              <li className="flex items-center gap-2"><MapPin size={14} /> UBa, Cameroon</li>
+              <li className="flex items-center gap-2"><MapPin size={14} /> Online tutoring</li>
             </ul>
           </div>
           <div>
@@ -243,7 +243,7 @@ const AppLayout: React.FC = () => {
             </form>
           </div>
         </div>
-        <div className="border-t border-white/5 py-6 text-center text-xs text-slate-500">© {new Date().getFullYear()} TutorConnect UBa · University of Bamenda.</div>
+        <div className="border-t border-white/5 py-6 text-center text-xs text-slate-500">© {new Date().getFullYear()} TutorConnect. All rights reserved.</div>
       </footer>
     </div>
   );

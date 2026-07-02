@@ -11,7 +11,7 @@ const Register: React.FC = () => {
       </div>
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Join TutorConnect UBa</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Join TutorConnect</h1>
           <p className="text-slate-400">Choose how you want to use the platform</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
